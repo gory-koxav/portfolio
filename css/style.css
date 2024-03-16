@@ -423,3 +423,40 @@ button:focus {
   font-weight: bold;
   filter: brightness(70%);
 }
+
+/* Arrow up */
+.arrow-up {
+  background-color: var(--color-primary);
+  position: fixed;
+  bottom: 3rem;
+  right: 3rem;
+  font-size: 3rem;
+  width: 4.5rem;
+  height: 4.5rem;
+  border-radius: 100%;
+  text-align: center;
+  color: var(--color-text);
+  box-shadow: 2px 2px 0px 0px var(--color-accent);
+}
+
+/* Footer */
+#contact {
+  background-color: var(--color-primary);
+  color: var(--color-text);
+}
+
+.contact__links {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  padding: 1rem;
+  font-size: 3rem;
+}
+
+.contact_link {
+  transition: color 200ms ease-in;
+}
+
+.contact_link:hover {
+  color: var(--color-accent);
+}
