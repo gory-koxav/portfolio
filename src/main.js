@@ -22,3 +22,29 @@ document.addEventListener("scroll", () => {
   }
   home.style.opacity = homeContainerOpacity;
 });
+
+// 상단 스크롤에서 Arrow-up 숨기기
+const arrowUp = document.querySelector(".arrow-up");
+
+document.addEventListener("scroll", () => {
+  if (window.scrollY > homeHeight / 2) {
+    arrowUp.classList.add("arrow-up--show");
+  } else {
+    arrowUp.classList.remove("arrow-up--show");
+  }
+});
+
+// 모바일 화면에서 햄버거 클릭 시 nav 보이기
+const navbarMenu = document.querySelector(".header__menu");
+const navbarToggle = document.querySelector(".header__toggle");
+
+navbarToggle.addEventListener("click", () => {
+  navbarMenu.classList.toggle("open");
+  console.log("cliked!!!");
+});
+
+// 모바일 화면에서 navbar 메뉴 클릭 시 자동으로 메뉴 닫기
+navbarMenu.addEventListener("click", () => {
+  navbarMenu.classList.remove("open");
+  console.log("cliked!");
+});
