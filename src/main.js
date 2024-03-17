@@ -15,6 +15,7 @@ document.addEventListener("scroll", () => {
 // 페이지 아래로 스크롤 시, 콘텐츠 점진적 투명화
 const home = document.querySelector(".home__container");
 const homeHeight = home.offsetHeight;
+let homeContainerOpacity = 1;
 
 document.addEventListener("scroll", () => {
   if (window.scrollY < homeHeight) {
@@ -42,11 +43,9 @@ const navbarToggle = document.querySelector(".header__toggle");
 
 navbarToggle.addEventListener("click", () => {
   navbarMenu.classList.toggle("open");
-  console.log("cliked!!!");
 });
 
 // 모바일 화면에서 navbar 메뉴 클릭 시 자동으로 메뉴 닫기
 navbarMenu.addEventListener("click", () => {
   navbarMenu.classList.remove("open");
-  console.log("cliked!");
 });
